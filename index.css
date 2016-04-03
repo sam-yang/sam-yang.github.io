@@ -1,0 +1,168 @@
+@-webkit-keyframes fadeIn { from { opacity:0; margin-top: 70px; } to { opacity:1; margin-top: 120px; } }
+@-moz-keyframes fadeIn { from { opacity:0; margin-top: 70px; } to { opacity:1; margin-top: 120px; } }
+@keyframes fadeIn { from { opacity:0; margin-top: 70px; } to { opacity:1; margin-top: 120px; } }
+
+@-webkit-keyframes fadeShadow { from {text-shadow: 0 0 #EEEEEE, 0 0 rbga(0, 0, 0, 1); } to {text-shadow: 4px 4px #EEEEEE, 7px 7px rgba(0, 0, 0, .2); } }
+@-moz-keyframes fadeShadow { from {text-shadow: 0 0 #EEEEEE, 0 0 rbga(0, 0, 0, 1); } to {text-shadow: 4px 4px #EEEEEE, 7px 7px rgba(0, 0, 0, .2); } }
+@keyframes fadeShadow { from {text-shadow: 0 0 #EEEEEE, 0 0 rbga(0, 0, 0, 1); } to {text-shadow: 4px 4px #EEEEEE, 7px 7px rgba(0, 0, 0, .2); } }
+
+p {
+	font-family: Lato;
+}
+
+#holder{
+	position: fixed;
+	width: 100%	;
+}
+#header {
+	text-align: center;
+	background-color: #EEEEEE;
+	width: 100%;
+	height: 100vh;
+}
+	#header #name {
+		font-weight: 400;
+		font-size: 75pt;
+		color: rgba(0,0,0,.87);
+		padding-top: 240px;
+		-webkit-animation:fadeShadow cubic-bezier(0.26, 0.85, 0.44, 0.91) 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+		-moz-animation:fadeShadow cubic-bezier(0.26, 0.85, 0.44, 0.91) 1;
+		animation:fadeShadow cubic-bezier(0.26, 0.85, 0.44, 0.91) 1;
+	 
+		-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+		-moz-animation-fill-mode:forwards;
+		animation-fill-mode:forwards;
+	 
+		-webkit-animation-duration:.9s;
+		-moz-animation-duration:.9s;
+		animation-duration:.9s;
+
+		-webkit-animation-delay: 0.4s;
+		-moz-animation-delay: 0.4s;
+		animation-delay: 0.4s;
+	}
+	#header #title {
+		font-weight: 300;
+		font-style: italic;
+		font-size: 35pt;
+		margin-top: 120px;
+		color: rgba(0,0,0,.54);
+	}
+	#header #arrow {
+	border-right: 7px solid #3F51B5;
+	border-bottom: 7px solid #3F51B5;
+	width: 60px;
+	height: 60px;
+	transform: rotate(45deg);
+	margin: 0 auto;
+	margin-top: 120px;
+}
+nav {
+	height: 40px;
+	width: 100%;
+	background-color: #3F51B5;
+	text-align: center;
+	display: table;
+	box-shadow: 0 7px 10px 0 rgba(0, 0, 0, .15);
+	border-top: 6px solid #303F9F;
+}
+	nav ul {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+		nav ul li {
+			display: inline-block;
+			font-family: Lato;
+			font-weight: 300;
+			font-size: 15px;	
+			margin: auto 30px;
+			color: rgba(256,256,256,.54);
+		}
+			nav ul li a {
+				text-decoration: none;
+				color: rgba(256,256,256,.54);
+				-o-transition:.5s;
+			    -ms-transition:.5s;
+			    -moz-transition:.5s;
+			    -webkit-transition:.5s;
+			    transition:.5s;
+			    display: block;
+			    height: 40px;
+			    line-height: 40px;
+			}
+				nav ul li a:hover {
+					color: rgba(256,256,256,.87);
+				}
+
+.head {
+	font-weight: 400;	
+	font-size: 2.4em;
+	padding-top: 20px;
+	color: rgba(256,256,256,.87);
+}
+
+.fade-in {
+	opacity:0; 
+	-webkit-animation:fadeIn cubic-bezier(0.26, 0.85, 0.44, 0.91) 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn cubic-bezier(0.26, 0.85, 0.44, 0.91) 1;
+	animation:fadeIn cubic-bezier(0.26, 0.85, 0.44, 0.91) 1;
+ 
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:.9s;
+	-moz-animation-duration:.9s;
+	animation-duration:.9s;
+
+	-webkit-animation-delay: 0.4s;
+	-moz-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+#projects {
+	width: 100%;
+	height: 800px;
+	background-color: #FFC107;
+	text-align: center;
+}
+#site {
+	width: 200px;
+	height: 200px;
+	margin: 70px auto;
+	background-color: #FFECB3;
+}
+#about {
+	width: 100%;
+	height: 400px;
+	background-color: #F44336;
+	text-align: center;
+}
+#pic {
+	width: 200px;
+	height: 200px;
+	background-color: #FFCDD2;
+	margin-top: 20px;
+	margin-left: 50px;
+	margin-right:50px;
+	float: left;
+}
+#descrip {
+	color: rgba(256,256,256,.54);
+	margin-top: 20px;
+	margin-right: 50px;
+	font-size: 20pt;
+	text-align: left;
+
+}
+#contact {
+	width: 100%;
+	height: 700px;
+	background-color: #CDDC39;
+	text-align: center;
+}
+#footer {
+	width: 100%;
+	height: 200px;
+	background-color: #BBBBBB;
+}
