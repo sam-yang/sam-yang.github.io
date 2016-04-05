@@ -10,11 +10,11 @@ p {
 	font-family: Lato;
 }
 
-#holder{
-	position: fixed;
-	width: 100%	;
+#c {
+	position: absolute;
 }
 #header {
+	z-index: 1;
 	text-align: center;
 	background-color: #EEEEEE;
 	width: 100%;
@@ -57,43 +57,60 @@ p {
 	margin: 0 auto;
 	margin-top: 120px;
 }
+
+
 nav {
+	display: table;
+	position: fixed;
 	height: 40px;
 	width: 100%;
 	background-color: #3F51B5;
-	text-align: center;
 	display: table;
 	box-shadow: 0 7px 10px 0 rgba(0, 0, 0, .15);
 	border-top: 6px solid #303F9F;
+	text-align: center;
 }
-	nav ul {
-		display: table-cell;
-		vertical-align: middle;
-		text-align: center;
+	nav a {
+		color: rgba(256,256,256,.54);
+	    display: inline-block;
+	    position: relative;
+	    height: 40px;
+	    line-height: 40px;
+	    text-decoration: none;
+	    font-family: Lato;
+		font-weight: 300;
+		font-size: 15px;	
+		padding: 0px 30px;
+		-o-transition:.5s;
+	    -ms-transition:.5s;
+	    -moz-transition:.5s;
+	    -webkit-transition:.5s;
+	    transition:.5s;
 	}
-		nav ul li {
-			display: inline-block;
-			font-family: Lato;
-			font-weight: 300;
-			font-size: 15px;	
-			margin: auto 30px;
-			color: rgba(256,256,256,.54);
-		}
-			nav ul li a {
-				text-decoration: none;
-				color: rgba(256,256,256,.54);
-				-o-transition:.5s;
-			    -ms-transition:.5s;
-			    -moz-transition:.5s;
-			    -webkit-transition:.5s;
-			    transition:.5s;
-			    display: block;
-			    height: 40px;
-			    line-height: 40px;
-			}
-				nav ul li a:hover {
-					color: rgba(256,256,256,.87);
-				}
+	nav a:hover,
+	nav a:focus {
+		color: rgba(256,256,256,.87);
+	}
+	nav a::after {
+		position: absolute;
+		content: '';
+		opacity: 0;
+		width: 100%;
+		height: 1px;
+		left: 0;
+		background: rgba(256,256,256,.87);
+		-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+		-moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+		transition: height 0.3s, opacity 0.3s, transform 0.3s;
+	}
+	nav a:hover::after,
+	nav a:focus::after {
+		height: 6px;
+		opacity: 1;
+		-webkit-transform: translateY(-6px);
+		-moz-transform: translateY(-6px);
+		transform: translateY(-6px);
+	}
 
 .head {
 	font-weight: 400;	
