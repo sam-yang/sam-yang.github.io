@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="index.css">
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300it	alic,700,700italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500italic,400italic,500,700,700italic,900,900italic,300italic,100,100italic,300' rel='stylesheet' type='text/css'>
 	<title>Samuel Yang | Front End Developer</title>
@@ -12,22 +12,25 @@
 <body>
 	<div id="holder">
 		<nav id="nav">
-				<a href="#">PROJECTS</a>
-				<a href="#">ABOUT</a>
-				<a href="#">CONTACT</a>
+				<a href="#projects-nav">PROJECTS</a>
+				<a href="#about-nav">ABOUT</a>
+				<a href="#contact-nav">CONTACT</a>
 		</nav>
 	</div>
-	<!-- <canvas id='c' width="3000px" height="2000px"></canvas> -->
+	<!-- <canvas id="garden"></canvas> -->
+  	<!-- <script src="index.js"></script> -->
 		<div id = "header">
-			<p id="name">SAMUEL YANG</p>
-			<p id="title">front end developer</p>
-			<a href="#"><div id="arrow" class="fade-in"></div></a>
+			<p class="top" id="name">SAMUEL YANG</p>
+			<p class="top" id="title">front end developer</p>
+			<a href="#projects-nav"><div id="arrow" class="fade-in"></div></a>
 		</div>
 		<div id="projects">
+			<div id="projects-nav"></div>
 			<p class="head">Projects</p>
-			<div id="site"></div>
+			<a href = "http://sam-yang.github.io/node-garden"><div id="node-garden"></div></a>
 		</div>
 		<div id="about">
+		<div id="about-nav"></div>
 			<p class="head">About</p>
 			<div id="pic"></div>
 			<p id="descrip">
@@ -35,6 +38,7 @@
 			</p>
 		</div>
 		<div id="contact">
+		<div id="contact-nav"></div>
 			<p class="head">Contact</p>
 		</div>
 		<div id="footer"></div>
